@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #959191;
+    
+    background-color: rgb(46, 47, 47);
+}
+
+h2 {
+    color: #959191;
+}
+
+button {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px; /* Updated padding values */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2b792f;
+}
+
+.icon-counter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.icon-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: auto;
+}
+
+/* .icon-counter { */
+    /* flex: 1 0 200px; This means that each box will grow and shrink equally, but not smaller than 200px */
+    /* margin: 10px; */
+/* } */
+
+.number-circle {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+    font: 32px Arial, sans-serif;
+    display: inline-block;
+
+}
+
+.number-circle.africa {
+    background: #ff0000; /* Red */
+    border-color: #ff0000;
+    color: #fff;
+}
+
+.number-circle.europe {
+    background: #00ff00; /* Green */
+    border-color: #00ff00;
+    color: #fff;
+}
+
+.number-circle.americas {
+    background: #0000ff; /* Blue */
+    border-color: #0000ff;
+    color: #fff;
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
