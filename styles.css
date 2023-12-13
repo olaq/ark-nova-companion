@@ -1,12 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     color: #959191;
-    
-    background-color: rgb(46, 47, 47);
-}
 
-h2 {
-    color: #959191;
+    background-color: rgb(46, 47, 47);
 }
 
 button {
@@ -14,7 +10,7 @@ button {
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 15px 32px; /* Updated padding values */
+    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -23,9 +19,55 @@ button {
     cursor: pointer;
 }
 
+
 button:hover {
     background-color: #2b792f;
 }
+
+.menu-button {
+    background-color: #8e1616;
+    float: right;
+    width: 100%;
+    margin-top: 0px;
+}
+.red-button:hover {
+    background-color: #d82525;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.dropdown {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.dropbtn {
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: rgb(46, 47, 47);
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+    /* padding: 12px 16px; */
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* icons */
 
 .icon-counter-container {
     display: flex;
@@ -37,48 +79,142 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
+    width: auto;
     margin: auto;
+    margin-bottom: 20px;
 }
-
-/* .icon-counter { */
-    /* flex: 1 0 200px; This means that each box will grow and shrink equally, but not smaller than 200px */
-    /* margin: 10px; */
-/* } */
 
 .number-circle {
     border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    padding: 8px;
+    width: 48px;
+    /* Updated width */
+    height: 48px;
+    /* Updated height */
+    padding: 10px;
+    /* Updated padding */
     background: #fff;
     border: 2px solid #666;
     color: #666;
     text-align: center;
-    font: 32px Arial, sans-serif;
+    font: 42px Arial, sans-serif;
+    /* Updated font size */
     display: inline-block;
+}
 
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .number-circle {
+        width: 32px;
+        /* Updated width for smaller screens */
+        height: 32px;
+        /* Updated height for smaller screens */
+        padding: 6px;
+        /* Updated padding for smaller screens */
+        font-size: 24px;
+        /* Updated font size for smaller screens */
+    }
+}
+
+/* Media query for screens larger than 600px */
+@media (min-width: 600px) {
+    .icon-counter {
+        width: 200px;
+        /* Larger width on larger screens */
+    }
 }
 
 .number-circle.africa {
-    background: #ff0000; /* Red */
-    border-color: #ff0000;
-    color: #fff;
+    background: #fcf100;
+    border-color: #fcf100;
+    color: #000;
 }
 
 .number-circle.europe {
-    background: #00ff00; /* Green */
-    border-color: #00ff00;
-    color: #fff;
+    background: #8dd4f8;
+    border-color: #8dd4f8;
+    color: #000;
+}
+
+.number-circle.asia {
+    background: #b6dbbc;
+    border-color: #b6dbbc;
+    color: #000;
 }
 
 .number-circle.americas {
-    background: #0000ff; /* Blue */
-    border-color: #0000ff;
+    background: #f3ae5f;
+    border-color: #f3ae5f;
+    color: #000;
+}
+
+.number-circle.australia {
+    background: #e65b62;
+    border-color: #e65b62;
+    color: #000;
+}
+
+.number-circle.birds {
+    background: #3aa0d6;
+    border-color: #3aa0d6;
     color: #fff;
 }
-.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+
+.number-circle.predators {
+    background: #9a2021;
+    border-color: #9a2021;
+    color: #fff;
+}
+
+.number-circle.herbivores {
+    background: #28785a;
+    border-color: #28785a;
+    color: #fff;
+}
+
+.number-circle.reptiles {
+    background: #4b418a;
+    border-color: #4b418a;
+    color: #fff;
+}
+
+.number-circle.primates {
+    background: #ebb01a;
+    border-color: #ebb01a;
+    color: #fff;
+}
+
+.number-circle.aquatic {
+    background: #ff52a6;
+    border-color: #ff52a6;
+    color: #fff;
+}
+
+.number-circle.bears {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #000;
+}
+
+.number-circle.petting {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #000;
+}
+
+.number-circle.research {
+    background: #a7c2d1;
+    border-color: #a7c2d1;
+    color: #000;
+}
+
+.number-circle.rock {
+    background: #665955;
+    border-color: #665955;
+    color: #eae8e7;
+}
+
+.number-circle.water {
+    background: #3e76bd;
+    border-color: #3e76bd;
+    color: #d2d9ee;
 }

@@ -10,10 +10,28 @@
 
 <body>
 
-    <h2>Ark Nova Score Tracker</h2>
+    <div class="header">
+        <div class="title">
+            <h2>Ark Nova Companion</h2>
+        </div>
+
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+            <div class="controls">
+                <button type="button" onclick="clearState()" class="menu-button">Clear State</button>
+                <!-- <button type="button" onclick="saveState()" class="menu-button">Save State</button>
+                <button type="button" onclick="loadState()" class="menu-button">Load State</button> -->
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="icon-counter-container">
         <div class="icon-counter">
-            <p class="number-circle africa"><span id="africaIcons">0</span></p>
+            <span class="number-circle africa" id="africaIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('africa')">+</button>
                 <button onclick="removeIcon('africa')">-</button>
@@ -21,7 +39,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle europe"><span id="europeIcons">0</span></p>
+            <span class="number-circle europe" id="europeIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('europe')">+</button>
                 <button onclick="removeIcon('europe')">-</button>
@@ -29,7 +47,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle asia"><span id="asiaIcons">0</span></p>
+            <span class="number-circle asia" id="asiaIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('asia')">+</button>
                 <button onclick="removeIcon('asia')">-</button>
@@ -37,7 +55,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle americas"><span id="americasIcons">0</span></p>
+            <span id="americasIcons" class="number-circle americas">0</span>
             <div class="buttons">
                 <button onclick="addIcon('americas')">+</button>
                 <button onclick="removeIcon('americas')">-</button>
@@ -45,7 +63,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle australia"><span id="australiaIcons">0</span></p>
+            <span class="number-circle australia" id="australiaIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('australia')">+</button>
                 <button onclick="removeIcon('australia')">-</button>
@@ -53,7 +71,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle birds"><span id="abirdsIcons">0</span></p>
+            <span class="number-circle birds" id="birdsIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('birds')">+</button>
                 <button onclick="removeIcon('birds')">-</button>
@@ -61,7 +79,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle predators"><span id="predatorsIcons">0</span></p>
+            <span class="number-circle predators" id="predatorsIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('predators')">+</button>
                 <button onclick="removeIcon('predators')">-</button>
@@ -69,7 +87,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle herbivores"><span id="herbivoresIcons">0</span></p>
+            <span class="number-circle herbivores" id="herbivoresIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('herbivores')">+</button>
                 <button onclick="removeIcon('herbivores')">-</button>
@@ -77,7 +95,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle reptiles"><span id="reptilesIcons">0</span></p>
+            <span class="number-circle reptiles" id="reptilesIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('reptiles')">+</button>
                 <button onclick="removeIcon('reptiles')">-</button>
@@ -85,7 +103,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle primates"><span id="primatesIcons">0</span></p>
+            <span class="number-circle primates" id="primatesIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('primates')">+</button>
                 <button onclick="removeIcon('primates')">-</button>
@@ -93,7 +111,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle aquatic"><span id="aquaticIcons">0</span></p>
+            <span class="number-circle aquatic" id="aquaticIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('aquatic')">+</button>
                 <button onclick="removeIcon('aquatic')">-</button>
@@ -101,7 +119,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle bears"><span id="bearsIcons">0</span></p>
+            <span class="number-circle bears" id="bearsIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('bears')">+</button>
                 <button onclick="removeIcon('bears')">-</button>
@@ -109,7 +127,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle petting"><span id="pettingIcons">0</span></p>
+            <span class="number-circle petting" id="pettingIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('petting')">+</button>
                 <button onclick="removeIcon('petting')">-</button>
@@ -117,7 +135,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle research"><span id="researchIcons">0</span></p>
+            <span class="number-circle research" id="researchIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('research')">+</button>
                 <button onclick="removeIcon('research')">-</button>
@@ -125,7 +143,7 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle rock"><span id="rockIcons">0</span></p>
+            <span class="number-circle rock" id="rockIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('rock')">+</button>
                 <button onclick="removeIcon('rock')">-</button>
@@ -133,16 +151,13 @@
         </div>
 
         <div class="icon-counter">
-            <p class="number-circle water"><span id="waterIcons">0</span></p>
+            <span class="number-circle water" id="waterIcons">0</span>
             <div class="buttons">
                 <button onclick="addIcon('water')">+</button>
                 <button onclick="removeIcon('water')">-</button>
             </div>
         </div>
     </div>
-
-    <p></p>
-    <button onclick="clearState()">Clear State</button>
 
     <script src="script.js"></script>
 

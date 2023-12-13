@@ -34,7 +34,7 @@ function removeIcon(iconType) {
 }
 
 function clearState() {
-    localStorage.removeItem('gameState');
+    // localStorage.removeItem('gameState');
 
     gameState.gameIcons = {
         africa: 0,
@@ -50,6 +50,7 @@ function clearState() {
         aquatic: 0,
         bears: 0,
         petting: 0,
+        research: 0,
         rock: 0,
         water: 0
     };
