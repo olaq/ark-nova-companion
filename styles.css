@@ -13,7 +13,8 @@ button {
     font-size: large;
     transition-duration: 0.4s;
     cursor: pointer;
-    min-width: 50%;
+    /* min-width: 50%; */
+    width: 100%
 }
 
 
@@ -33,6 +34,7 @@ button:hover {
 
 .buttons {
     display: flex;
+    width: 100%
 }
 
 .dropdown {
@@ -83,8 +85,7 @@ button:hover {
 }
 
 .number {
-    /* font-size: 2em; */
-    /* font-weight: bold; */
+    font-size: 1.5em;
     margin-left: 0.2em;
 }
 
@@ -160,8 +161,8 @@ button:hover {
 }
 
 .number-circle.aquatic {
-    background: #485491;
-    border-color: #485491;
+    background: #47549f;
+    border-color: #47549f;
     color: #fff;
 }
 
@@ -193,4 +194,23 @@ button:hover {
     background: #3e76bd;
     border-color: #3e76bd;
     color: #d2d9ee;
+}
+
+
+.confirm-dialog {
+    display: none;
+    position: fixed;
+    text-align: center;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2e2f2f;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+.confirm-dialog button {
+    margin: 10px;
+    width: 90%;
 }

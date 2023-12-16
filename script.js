@@ -33,9 +33,20 @@ function removeIcon(iconType) {
     }
 }
 
-function clearState() {
-    // localStorage.removeItem('gameState');
+function clearStateButton() {
+    document.getElementById('confirmDialog').style.display = 'block';
+}
 
+document.getElementById('confirmYes').addEventListener('click', function() {
+    clearState();
+    document.getElementById('confirmDialog').style.display = 'none';
+});
+
+document.getElementById('confirmNo').addEventListener('click', function() {
+    document.getElementById('confirmDialog').style.display = 'none';
+});
+
+function clearState() {
     gameState.gameIcons = {
         africa: 0,
         europe: 0,
@@ -66,12 +77,12 @@ if (localStorage.getItem('gameState')) {
     gameState = JSON.parse(localStorage.getItem('gameState'));
 }
 
-
-
 // Save game state to local storage every 5 seconds
 setInterval(function () {
     localStorage.setItem('gameState', JSON.stringify(gameState));
 }, 5000);
+
+
 
 
 

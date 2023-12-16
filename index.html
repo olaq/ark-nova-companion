@@ -20,13 +20,10 @@
         <button class="dropbtn">Menu</button>
         <div class="dropdown-content">
             <div class="controls">
-                <button type="button" onclick="clearState()" class="menu-button">Clear State</button>
-                <!-- <button type="button" onclick="saveState()" class="menu-button">Save State</button>
-                <button type="button" onclick="loadState()" class="menu-button">Load State</button> -->
+                <button type="button" onclick="clearStateButton()" class="menu-button">Clear State</button>
             </div>
         </div>
     </div>
-
 
 
     <div class="icon-counter-container">
@@ -238,6 +235,12 @@
                 <button onclick="removeIcon('water')">-</button>
             </div>
         </div>
+    </div>
+
+    <div id="confirmDialog" class="confirm-dialog">
+        <p>Are you sure you want to clear the state?</p>
+        <button id="confirmYes">Yes</button>
+        <button id="confirmNo">No</button>
     </div>
 
     <script src="script.js"></script>
