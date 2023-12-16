@@ -23,10 +23,10 @@ button:hover {
 }
 
 .menu-button {
-    background-color: #8e1616;
-    float: right;
     width: 100%;
     margin-top: 0px;
+    min-width: max-content;
+    text-align: justify;
 }
 .red-button:hover {
     background-color: #d82525;
@@ -53,7 +53,6 @@ button:hover {
     position: absolute;
     right: 0;
     background-color: rgb(46, 47, 47);
-    min-width: 160px;
     z-index: 1;
 }
 
