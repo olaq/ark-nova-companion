@@ -16,7 +16,8 @@ var gameState = {
         research: 0,
         rock: 0,
         water: 0
-    }
+    },
+    marineWorldsExpansionEnabled: true
 };
 
 function addIcon(iconType) {
@@ -72,6 +73,22 @@ function clearState() {
     }
 }
 
+function toggleMarineWorlds() {
+    gameState.marineWorldsExpansionEnabled = !gameState.marineWorldsExpansionEnabled;
+    console.log('Marine Worlds Expansion Enabled: ' + gameState.marineWorldsExpansionEnabled);
+    updateExpansionsVisibility();
+}
+
+function updateExpansionsVisibility() {
+    if (gameState.marineWorldsExpansionEnabled) {
+        document.querySelector('.marine-worlds-expansion').style.display = 'block';
+        document.getElementById('expansionMarineWorldsButton').innerText = "Disable Marine Worlds";
+    } else {
+        document.querySelector('.marine-worlds-expansion').style.display = 'none';
+        document.getElementById('expansionMarineWorldsButton').innerText = "Enable Marine Worlds";
+    }
+}
+
 // Load game state from local storage
 if (localStorage.getItem('gameState')) {
     gameState = JSON.parse(localStorage.getItem('gameState'));
@@ -92,5 +109,3 @@ if ('serviceWorker' in navigator) {
         console.log('Service Worker registration failed:', error);
       });
   }
-
-
