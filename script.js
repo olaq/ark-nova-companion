@@ -21,14 +21,14 @@ var gameState = {
 
 function addIcon(iconType) {
     gameState.gameIcons[iconType]++;
-    document.getElementById(iconType + 'Icons')
+    document.getElementById(iconType + 'Counter')
         .innerText = gameState.gameIcons[iconType];
 }
 
 function removeIcon(iconType) {
     if (gameState.gameIcons[iconType] > 0) {
         gameState.gameIcons[iconType]--;
-        document.getElementById(iconType + 'Icons')
+        document.getElementById(iconType + 'Counter')
             .innerText = gameState.gameIcons[iconType];
     }
 }
@@ -56,7 +56,7 @@ function clearState() {
     };
 
     for (var iconType in gameState.gameIcons) {
-        document.getElementById(iconType + 'Icons')
+        document.getElementById(iconType + 'Counter')
             .innerText = gameState.gameIcons[iconType];
     }
 }

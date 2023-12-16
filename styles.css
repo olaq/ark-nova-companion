@@ -1,22 +1,19 @@
 body {
     font-family: Arial, sans-serif;
     color: #959191;
-
     background-color: rgb(46, 47, 47);
 }
 
 button {
-    margin-top: 10px;
+    margin-top: 0.5em;
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    padding: 0.5em 1em;
+    font-size: large;
     transition-duration: 0.4s;
     cursor: pointer;
+    min-width: 50%;
 }
 
 
@@ -36,8 +33,6 @@ button:hover {
 
 .buttons {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .dropdown {
@@ -57,8 +52,6 @@ button:hover {
     right: 0;
     background-color: rgb(46, 47, 47);
     min-width: 160px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
-    /* padding: 12px 16px; */
     z-index: 1;
 }
 
@@ -79,48 +72,31 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: auto;
-    margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 0.2em;
+    padding: 0.5em;
+}
+
+.counter-block {
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+}
+
+.number {
+    /* font-size: 2em; */
+    /* font-weight: bold; */
+    margin-left: 0.2em;
 }
 
 .number-circle {
     border-radius: 50%;
     width: 48px;
-    /* Updated width */
     height: 48px;
-    /* Updated height */
-    padding: 10px;
-    /* Updated padding */
-    background: #fff;
-    border: 2px solid #666;
-    color: #666;
-    text-align: center;
-    font: 42px Arial, sans-serif;
-    /* Updated font size */
-    display: inline-block;
+    padding: 0.2em;
 }
 
-/* Media query for screens smaller than 600px */
-@media (max-width: 600px) {
-    .number-circle {
-        width: 32px;
-        /* Updated width for smaller screens */
-        height: 32px;
-        /* Updated height for smaller screens */
-        padding: 6px;
-        /* Updated padding for smaller screens */
-        font-size: 24px;
-        /* Updated font size for smaller screens */
-    }
-}
-
-/* Media query for screens larger than 600px */
-@media (min-width: 600px) {
-    .icon-counter {
-        width: 200px;
-        /* Larger width on larger screens */
-    }
+.number-circle img {
+    width: 100%;
 }
 
 .number-circle.africa {
@@ -184,8 +160,8 @@ button:hover {
 }
 
 .number-circle.aquatic {
-    background: #ff52a6;
-    border-color: #ff52a6;
+    background: #485491;
+    border-color: #485491;
     color: #fff;
 }
 
