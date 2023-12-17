@@ -67,19 +67,16 @@ function clearState() {
         water: 0
     };
 
-    for (var iconType in gameState.gameIcons) {
-        document.getElementById(iconType + 'Counter')
-            .innerText = gameState.gameIcons[iconType];
-    }
+    updateIconsVisibility();
 }
 
 function toggleMarineWorlds() {
     gameState.marineWorldsExpansionEnabled = !gameState.marineWorldsExpansionEnabled;
     console.log('Marine Worlds Expansion Enabled: ' + gameState.marineWorldsExpansionEnabled);
-    updateExpansionsVisibility();
+    updateMarineWolrdsExpansionVisibility();
 }
 
-function updateExpansionsVisibility() {
+function updateMarineWolrdsExpansionVisibility() {
     if (gameState.marineWorldsExpansionEnabled) {
         document.querySelector('.marine-worlds-expansion').style.display = 'block';
         document.getElementById('expansionMarineWorldsButton').innerText = "Disable Marine Worlds";
@@ -89,23 +86,47 @@ function updateExpansionsVisibility() {
     }
 }
 
-// Load game state from local storage
-if (localStorage.getItem('gameState')) {
-    gameState = JSON.parse(localStorage.getItem('gameState'));
+function updateIconsVisibility() {
+    for (var iconType in gameState.gameIcons) {
+        document.getElementById(iconType + 'Counter')
+            .innerText = gameState.gameIcons[iconType];
+    }
 }
+
+function loadState() {
+    if (localStorage.getItem('gameState')) {
+        gameState = JSON.parse(localStorage.getItem('gameState'));
+    }
+}
+
+function saveState() {
+    localStorage.setItem('gameState', JSON.stringify(gameState));
+}
+
+// Load game state from local storage when the window is loaded
+window.addEventListener('load', function () {
+    loadState();
+    updateIconsVisibility();
+    updateMarineWolrdsExpansionVisibility();
+});
+
+// Save game state to local storage when the window is closed
+window.addEventListener('beforeunload', function () {
+    saveState();
+});
 
 // Save game state to local storage every 5 seconds
 setInterval(function () {
-    localStorage.setItem('gameState', JSON.stringify(gameState));
+    saveState();
 }, 5000);
 
 
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', { scope: './'})
-      .then((registration) => {
-        console.log('Service Worker registered:', registration);
-      })
-      .catch((error) => {
-        console.log('Service Worker registration failed:', error);
-      });
-  }
+        .then((registration) => {
+            console.log('Service Worker registered:', registration);
+        })
+        .catch((error) => {
+            console.log('Service Worker registration failed:', error);
+        });
+}
