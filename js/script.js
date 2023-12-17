@@ -101,9 +101,9 @@ setInterval(function () {
 
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
+    navigator.serviceWorker.register('service-worker.js', { scope: './'})
       .then((registration) => {
-        console.log('Service Worker registered with scope:', registration.scope);
+        console.log('Service Worker registered:', registration);
       })
       .catch((error) => {
         console.log('Service Worker registration failed:', error);
